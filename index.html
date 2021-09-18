@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <fieldset>
+<span>
+<input type="number" id="n1" placeholder="escolhe um numero ai vai eu so pica"> <br>
+<input type="number" id="n2" placeholder="vc sabe tu n é burro">  <br>
+<select  id="operacao">
+    <option value="">Escolhe um trem ai </option>
+    <option value="soma">soma</option>
+    <option value="multi">multiplicação</option>
+    <option value="div">divisão</option>
+    <option value="sub">subtração</option>
+</select>
+<button onclick="Calcular()"> Sei la dude im just living you know? i kinda tired but i must continue walking right? like frankye said :"i did it my way"</button> <br>
+</span>
+</fieldset>
+    <script>
+        function Calcular() {
+            let n1 = parseFloat(document.getElementById("n1").value)
+            let n2 = parseFloat(document.getElementById("n2").value)
+           let op = document.getElementById("operacao").value
+           let resultadoSoma
+           let resultado = null
+           let resultadoMulti
+           let resultadoDiv
+           let resultadoSub
+          console.log(n1)
+          console.log(n2)
+          console.log(op)
+          if (n1 == 0 || n2 == 0) {
+              alert("mas tu é burro hein tira esse zero dai vai agora")
+          }
+            else if (op == "soma") {
+               resultado = soma(n1,n2)
+               alert(`A resposta do universo é: ${resultado}`)
+            }
+            else if (op == "multi") {
+                resultado = multi(n1,n2)
+                alert(`A resposta do universo é: ${resultado}`)
+            }
+            else if (op == "div") {
+               resultado = div(n1,n2)
+               alert(`A resposta do universo é: ${resultado}`)
+            }
+            else if (op == "sub") {
+           resultado  = sub(n1,n2)
+           alert(`A resposta do universo é: ${resultado}`)
+        }    
+       
+        function soma(valor1,valor2) {
+            return valor1 + valor2
+        }
+        function multi(valor1,valor2) {
+            return valor1 * valor2
+        }
+        function div(valor1,valor2) {
+            return valor1 / valor2
+        }
+        function sub(valor1,valor2) {
+            return valor1 + valor2
+        }
+        }
+    </script>
+</body>
+</html>
